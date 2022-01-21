@@ -51,8 +51,6 @@
 #include <osgUtil/SmoothingVisitor>
 
 
-
-
 osg::Geode* createTexturePanel()
 {
     osg::Vec3Array *vertices = new osg::Vec3Array;
@@ -92,12 +90,8 @@ osg::Texture2D *createFloatTextureRectangle(int width, int height)
     return tex2D.release();
 }
 
-
-
-
 int main(int argc, char** argv)
 {
-
 
     osg::ref_ptr<osgViewer::Viewer> viewer = new osgViewer::Viewer;
     osg::ref_ptr<osg::Group> grp = new osg::Group;
@@ -136,10 +130,8 @@ int main(int argc, char** argv)
     osg::Geode * panel1 = createTexturePanel();
     panel1->getOrCreateStateSet()->setTextureAttributeAndModes(0, textureSample);
 #if 0
-    {undefined
+    {
                 grp->addChild(panel1);
-
-
     }
 #endif
 #if 1
